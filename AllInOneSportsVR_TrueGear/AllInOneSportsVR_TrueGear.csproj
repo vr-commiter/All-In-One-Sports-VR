@@ -1,0 +1,186 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net46</TargetFramework>
+    <AssemblyName>AllInOneSportsVR_TrueGear</AssemblyName>
+    <Product>TrueGear Mod For All-In-One Sports VR</Product>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RestoreAdditionalProjectSources>
+      https://api.nuget.org/v3/index.json;
+      https://nuget.bepinex.dev/v3/index.json;
+      https://nuget.samboy.dev/v3/index.json
+    </RestoreAdditionalProjectSources>
+    <RootNamespace>AllInOneSportsVR_TrueGear</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.Unity.Mono" Version="6.0.0-be.*" IncludeAssets="compile" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
+	<PackageReference Include="UnityEngine.Modules" Version="2021.3.23" IncludeAssets="compile" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Appnori.Archery">
+      <HintPath>libs\Appnori.Archery-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Badminton">
+      <HintPath>libs\Appnori.Badminton-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.BaseBall">
+      <HintPath>libs\Appnori.BaseBall-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.BasketBall">
+      <HintPath>libs\Appnori.BasketBall-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Billiards">
+      <HintPath>libs\Appnori.Billiards-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Bowling">
+      <HintPath>libs\Appnori.Bowling-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Boxing.HeavyBag">
+      <HintPath>libs\Appnori.Boxing.HeavyBag-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Boxing.Multi">
+      <HintPath>libs\Appnori.Boxing.Multi-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Boxing.Rythm">
+      <HintPath>libs\Appnori.Boxing.Rythm-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Boxing.Single">
+      <HintPath>libs\Appnori.Boxing.Single-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Darts">
+      <HintPath>libs\Appnori.Darts-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.FootHockey">
+      <HintPath>libs\Appnori.FootHockey-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Golf">
+      <HintPath>libs\Appnori.Golf-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.KungFu">
+      <HintPath>libs\Appnori.KungFu-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Nexus">
+      <HintPath>libs\Appnori.Nexus-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Nexus.AppnoriEditor">
+      <HintPath>libs\Appnori.Nexus.AppnoriEditor-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.PingPong">
+      <HintPath>libs\Appnori.PingPong-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Soccer">
+      <HintPath>libs\Appnori.Soccer-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Squash">
+      <HintPath>libs\Appnori.Squash-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.Tennis">
+      <HintPath>libs\Appnori.Tennis-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Appnori.VolleyBall">
+      <HintPath>libs\Appnori.VolleyBall-nstrip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>libs\netstandard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PhotonUnityNetworking">
+      <HintPath>libs\PhotonUnityNetworking.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TrueGearSDK">
+      <HintPath>libs\TrueGearSDK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="mscorlib">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Core">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Data">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.IO.Compression.FileSystem">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Numerics">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Runtime.Serialization">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
